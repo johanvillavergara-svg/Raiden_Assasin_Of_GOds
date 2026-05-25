@@ -1,0 +1,10 @@
+AddEncoding gzip .gz
+AddType application/wasm .wasm
+<FilesMatch "\.wasm\.gz$">
+  AddEncoding gzip .gz
+  ForceType application/wasm
+</FilesMatch>
+<FilesMatch "\.js\.gz$">
+  AddEncoding gzip .gz
+  ForceType application/javascript
+</FilesMatch>
